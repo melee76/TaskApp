@@ -1,18 +1,18 @@
-package ru.job4j.taskApp.Actions;
+package ru.job4j.taskApp.actions;
 
 import ru.job4j.taskApp.service.TaskService;
 
 import java.util.Scanner;
 
-public class FindAllTasks implements Action {
+public class FindTask implements Action {
 
     @Override
     public String name() {
-        return "Показать все задачи";
+        return "Найти задачу по имени";
     }
 
     @Override
     public void execute(Scanner scanner, TaskService taskService) {
-        taskService.listTasks();
+        taskService.searchTask(scanner);
     }
 }

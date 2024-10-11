@@ -1,17 +1,18 @@
-package ru.job4j.taskApp.Actions;
+package ru.job4j.taskApp.actions;
 
 import ru.job4j.taskApp.service.TaskService;
 
 import java.util.Scanner;
 
-public class CreateTask implements Action {
+public class UpdateTask implements Action {
+
     @Override
     public String name() {
-        return "Добавить задачу";
+        return "Редактировать задачу";
     }
 
     @Override
     public void execute(Scanner scanner, TaskService taskService) {
-        taskService.addTask(scanner);
+        taskService.editTask(scanner);
     }
 }

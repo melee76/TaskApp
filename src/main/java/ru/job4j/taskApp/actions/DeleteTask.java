@@ -1,4 +1,4 @@
-package ru.job4j.taskApp.Actions;
+package ru.job4j.taskApp.actions;
 
 import ru.job4j.taskApp.service.TaskService;
 

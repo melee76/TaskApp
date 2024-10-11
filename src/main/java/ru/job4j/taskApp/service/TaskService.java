@@ -10,6 +10,10 @@ import java.util.Scanner;
 public class TaskService {
     private TaskRepository taskRepository = new TaskRepository();
 
+    public TaskService(TaskRepository taskRepository) {
+        this.taskRepository = taskRepository;
+    }
+
     public void addTask(Scanner scanner) {
         System.out.print("Введите имя задачи: ");
         String name = scanner.nextLine();

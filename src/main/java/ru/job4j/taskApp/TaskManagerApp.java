@@ -1,13 +1,24 @@
 package ru.job4j.taskApp;
 
+import ru.job4j.taskApp.Actions.*;
+import ru.job4j.taskApp.repo.TaskRepository;
 import ru.job4j.taskApp.service.TaskService;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class TaskManagerApp {
-    private static TaskService taskService = new TaskService();
 
-    public static void main(String[] args) {
+    private final TaskService taskService;
+    private final List<Action> actions;
+
+    public TaskManagerApp(TaskService taskService, List<Action> actions) {
+        this.taskService = taskService;
+        this.actions = actions;
+    }
+
+    public void run() {
         Scanner scanner = new Scanner(System.in);
         int choice;
 
@@ -16,43 +27,36 @@ public class TaskManagerApp {
             choice = scanner.nextInt();
             scanner.nextLine();
 
-            handleUserChoice(choice, scanner);
+            if (choice > 0 && choice <= actions.size()) {
+                actions.get(choice - 1).execute(scanner, taskService);
+            } else if (choice != 6) {
+                System.out.println("Неверный пункт меню. Пожалуйста, попробуйте снова.");
+            }
         } while (choice != 6);
+
+        System.out.println("Выход из программы...");
     }
 
-    private static void showMenu() {
+    private void showMenu() {
         System.out.println("\nМеню:");
-        System.out.println("1. Добавить задачу");
-        System.out.println("2. Редактировать задачу");
-        System.out.println("3. Удалить задачу");
-        System.out.println("4. Показать все задачи");
-        System.out.println("5. Найти задачу по имени");
+        for (int i = 0; i < actions.size(); i++) {
+            System.out.printf("%d. %s%n", i + 1, actions.get(i).name());
+        }
         System.out.println("6. Выход");
         System.out.print("Выберите пункт меню: ");
     }
 
-    private static void handleUserChoice(int choice, Scanner scanner) {
-        switch (choice) {
-            case 1:
-                taskService.addTask(scanner);
-                break;
-            case 2:
-                taskService.editTask(scanner);
-                break;
-            case 3:
-                taskService.deleteTask(scanner);
-                break;
-            case 4:
-                taskService.listTasks();
-                break;
-            case 5:
-                taskService.searchTask(scanner);
-                break;
-            case 6:
-                System.out.println("Выход из программы...");
-                break;
-            default:
-                System.out.println("Неверный пункт меню. Пожалуйста, попробуйте снова.");
-        }
+    public static void main(String[] args) {
+        TaskService taskService = new TaskService(new TaskRepository());
+        List<Action> actions = Arrays.asList(
+                new CreateTask(),
+                new UpdateTask(),
+                new DeleteTask(),
+                new FindAllTasks(),
+                new FindTask()
+        );
+
+        TaskManagerApp app = new TaskManagerApp(taskService, actions);
+        app.run();
     }
 }

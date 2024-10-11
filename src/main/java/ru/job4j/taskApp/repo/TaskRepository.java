@@ -11,22 +11,30 @@ public class TaskRepository {
     private int nextId = 1;
 
     public Task addTask(String name, String description) {
-        /*код**/
+        Task task = new Task(nextId++, name, description);
+        tasks.add(task);
+        return task;
     }
 
     public Optional<Task> getTaskById(int id) {
-        /*код**/
+        return tasks.stream().filter(task -> task.getId() == id).findFirst();
     }
 
     public List<Task> getAllTasks() {
-        /*код**/
+        return new ArrayList<>(tasks);
     }
 
     public void deleteTask(Task task) {
-        /*код**/
+        tasks.remove(task);
     }
 
     public List<Task> findByName(String name) {
-        /*код**/
+        List<Task> foundTasks = new ArrayList<>();
+        for (Task task : tasks) {
+            if (task.getName().equalsIgnoreCase(name)) {
+                foundTasks.add(task);
+            }
+        }
+        return foundTasks;
     }
 }

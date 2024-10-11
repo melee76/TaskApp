@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58793ae1-eb39-463c-85ff-a57fa504516d" name="Changes" comment="Задание" />
+    <list default="true" id="58793ae1-eb39-463c-85ff-a57fa504516d" name="Changes" comment="добавление логики ООП">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/job4j/taskApp/TaskManagerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/taskApp/TaskManagerApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/job4j/taskApp/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/taskApp/model/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/job4j/taskApp/repo/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/taskApp/repo/TaskRepository.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,48 +20,50 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2nG7CVkqMyewMVq7dHk6dKoFgsi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.TaskApp.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TaskManagerApp.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TaskServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.TaskApp [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/projects/TaskApp&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.TaskApp.executor": "Run",
+    "Application.TaskManagerApp.executor": "Run",
+    "JUnit.TaskServiceTest.executor": "Run",
+    "Maven.TaskApp [clean,install].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/projects/TaskApp1"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -113,13 +122,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -129,19 +131,19 @@
       <option name="presentableId" value="Default" />
       <updated>1728587432982</updated>
     </task>
-    <task id="LOCAL-00001" summary="Задание">
+    <task id="LOCAL-00001" summary="добавление логики ООП">
       <option name="closed" value="true" />
-      <created>1728633840123</created>
+      <created>1728669976115</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1728633840123</updated>
+      <updated>1728669976115</updated>
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Задание" />
-    <option name="LAST_COMMIT_MESSAGE" value="Задание" />
+    <MESSAGE value="добавление логики ООП" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавление логики ООП" />
   </component>
 </project>

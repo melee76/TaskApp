@@ -31,4 +31,8 @@ public class Task {
         this.description = description;
     }
 
+    @Override
+    public String toString() {
+        return "ID: " + id + ", Имя: " + name + ", Описание: " + description;
+    }
 }
